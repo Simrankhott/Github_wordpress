@@ -1,3 +1,8 @@
+
+# Project Title
+
+A brief description of what this project does and who it's for
+
 # WordPress Deployment with Nginx and GitHub Actions
 
 This repository contains the setup for deploying a WordPress website using the Nginx web server, LEMP stack, and GitHub Actions for continuous deployment.
@@ -11,6 +16,7 @@ This repository contains the setup for deploying a WordPress website using the N
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Optimizations](#optimizations)
+- [API Reference](#api-reference)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -57,10 +63,23 @@ This project demonstrates the automated deployment of a WordPress website using 
   - Enabled caching and gzip compression for better performance.
   - Tweaked PHP and FastCGI settings for optimal PHP processing.
 
-## Contributing
+## API Reference
 
-Contributions are welcome! If you find any issues or improvements, please feel free to create a pull request or submit an issue.
+Configure your Nginx server block to handle PHP requests and include `index.php` in the list of index files:
 
-## License
+```
+# Add index.php to the list if you are using PHP
+index index.php index.html index.htm index nginx-debian.html;
+```
 
-This project is licensed under the [MIT License](LICENSE).
+```nginx
+location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+
+    # With php-fpm (or other unix sockets):
+    fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+    # With php-cgi (or other tcp sockets):
+    # fastcgi_pass 127.0.0.1:9000;
+}
+
+
