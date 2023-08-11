@@ -89,11 +89,13 @@ location ~ \.php$ {
   <img width="960" alt="wp-1" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/92d377d2-f718-4515-a827-8cc958f77d19">
 </p>
 
+
 <br>
 
 <p align="center">
   <img width="960" alt="wp-2" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/6a61d0f3-8669-4cd1-a6ef-0bbbed2caf99">
 </p>
+
 
 <br>
 
@@ -101,11 +103,13 @@ location ~ \.php$ {
   <img width="960" alt="wp-4" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/b42d19f0-c9bf-4a9f-957f-acb78d93bbe3">
 </p>
 
+
 <br>
 
 <p align="center">
   <img width="960" alt="wp-5" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/0270df6f-d1b0-41cf-b68b-29aad550b02f">
 </p>
+
 
 <br>
 
@@ -113,11 +117,13 @@ location ~ \.php$ {
   <img width="960" alt="wp-6" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/a514c534-5990-4a01-b10f-baf1830826c2">
 </p>
 
+
 <br>
 
 <p align="center">
   <img width="960" alt="wp-7" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/5995bff8-5744-4ae1-b01a-61b27eb4acc9">
 </p>
+
 
 <br>
 
