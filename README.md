@@ -86,14 +86,14 @@ location ~ \.php$ {
 ## Screenshots
 
 <p align="center">
-  <img width="960" alt="wp-1" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/92d377d2-f718-4515-a827-8cc958f77d19">
+  <img width="960" alt="wp-2" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/6a61d0f3-8669-4cd1-a6ef-0bbbed2caf99">
 </p>
 
 
 <br>
 
 <p align="center">
-  <img width="960" alt="wp-2" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/6a61d0f3-8669-4cd1-a6ef-0bbbed2caf99">
+  <img width="960" alt="wp-1" src="https://github.com/Simrankhott/Github_wordpress/assets/91006102/92d377d2-f718-4515-a827-8cc958f77d19">
 </p>
 
 
