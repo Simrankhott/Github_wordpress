@@ -1,0 +1,36 @@
+name: WordPress Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to EC2
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y mariadb-server nginx php php8.1-fpm php-mysql
+
+          cd /var/www/html
+          sudo wget https://wordpress.org/latest.tar.gz
+          sudo tar -xzvf latest.tar.gz
+
+          sudo mysql -e "ALTER USER root@localhost IDENTIFIED VIA mysql_native_password; SET PASSWORD = PASSWORD('Pass@123'); CREATE DATABASE wordpress;"
+
+          # Copy and configure wp-config.php
+          cd /var/www/html/wordpress
+          sudo cp wp-config-sample.php wp-config.php
+          sudo sed -i "s/define( 'DB_NAME', 'database_name_here' );/define( 'DB_NAME', 'wordpress' );/" wp-config.php
+          sudo sed -i "s/define( 'DB_USER', 'username_here' );/define( 'DB_USER', 'root' );/" wp-config.php
+          sudo sed -i "s/define( 'DB_PASSWORD', 'password_here' );/define( 'DB_PASSWORD', 'Pass@123' );/" wp-config.php
+          sudo sed -i "s/define( 'DB_HOST', 'localhost' );/define( 'DB_HOST', 'localhost' );/" wp-config.php
+
+        
+          sudo systemctl restart nginx
